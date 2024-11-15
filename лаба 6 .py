@@ -1,6 +1,7 @@
 '''
+#Номер 1
 def foo(text):
-    # Разбиваем 
+    # Разбиваем
     words = text.split()
     
     # Обрабатываем каждое слово по отдельности
@@ -15,13 +16,14 @@ def foo(text):
         return ' '.join(wordsArray)
 
 #Использование функции
-text = "Тест"
+text = input('Add text to change')
 result = foo(text)
 print(result)
 
-
-S = ''
-So = ''
+'''
+#Номер 2
+S = input('Enter word where u want to find')
+So = input('Enter word to find')
 
 def foo(S, So):
     return S.count(So)
@@ -29,18 +31,27 @@ def foo(S, So):
 result = foo(S, So)
 
 print(result)
+
+from random import randint
 '''
+#Номер 3
+a = []
+for x in range(1, 10):
+    a.append(randint(-100, 100))
+print(a, '- original array' )
 
-a = [10, -5, 30, 25]
+# 1. Сумм. полож
+try:
+    sP = sum(x for x in a if x > 0)
+    print("1 task:", sP)
 
-# 1. Сумм. полож 
-sP = sum(x for x in a if x > 0)
-print("1 задание:", sP)
+    maxE = max(a)
 
-maxE = max(a)
+    m1 = [x for x in a if maxE * 0.8 <= x <= maxE * 1.2]
+    m2 = [x for x in a if not (maxE * 0.8 <= x <= maxE * 1.2)]
+    result = m1 + m2
+except:
+    print('Wrong entered data')
 
-m1 = [x for x in a if maxE * 0.8 <= x <= maxE * 1.2]
-m2 = [x for x in a if not (maxE * 0.8 <= x <= maxE * 1.2)]
-result = m1 + m2
-
-print("2 задание:", result)
+print("2 task:", result)
+'''
