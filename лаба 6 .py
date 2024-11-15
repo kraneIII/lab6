@@ -22,7 +22,7 @@ print(result)
 
 '''
 #Номер 2
-S = input('Enter word where u want to find')
+S = input('Enter word in which u want to find')
 So = input('Enter word to find')
 
 def foo(S, So):
